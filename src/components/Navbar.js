@@ -10,7 +10,7 @@ function Navbar() {
      border border-[#F2F2F7]  px-4 text-white bg-[#0C0911] "
     >
       {/* nav left*/}
-      <div className="flex justify-center items-center whitespace-nowrap gap-1">
+      <div className="flex justify-center items-center whitespace-nowrap gap-1 pl-3 md:pl-0">
         <Image src={assets.logo} alt="Logo" />
         <h1 className="text-sm md:text-lg lg:text-2xl">Idea Validator</h1>
       </div>
@@ -40,7 +40,7 @@ function Navbar() {
         </Link>
         <div
           className="flex items-center  justify-center whitespace-nowrap p-2.5 gap-1.5 rounded-lg tracking-tight 
-             bg-gradient-to-r from-[#3F1480] to-[#A43D83]"
+             bg-gradient-to-r from-[#3F1480] to-[#A43D83] pr-4 md:pr-0"
         >
           <Image
             src={assets.TryFree}
