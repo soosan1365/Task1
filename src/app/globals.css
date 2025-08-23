@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-image: linear-gradient(to bottom, #261425, #180a26);
+  background-repeat: no-repeat;
+  margin: 15px 25px;
+  @media (min-width:1024px) {
+    margin: 56px 105px;
+  }
+}
