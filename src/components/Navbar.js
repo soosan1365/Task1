@@ -39,8 +39,8 @@ function Navbar() {
           Sign In
         </Link>
         <div
-          className="flex items-center  justify-center whitespace-nowrap p-2.5 gap-1.5 rounded-lg tracking-tight 
-             bg-gradient-to-r from-[#3F1480] to-[#A43D83] pr-4 md:pr-0"
+          className="flex items-center  justify-center whitespace-nowrap px-3 py-2 gap-1.5 rounded-lg tracking-tight 
+             bg-gradient-to-r from-[#3F1480] to-[#A43D83] "
         >
           <Image
             src={assets.TryFree}
