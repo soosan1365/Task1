@@ -74,7 +74,7 @@ function Navbar() {
         <div
           className={`absolute top-0 right-7  bottom-0 overflow-hidden whitespace-nowrap
               bg-[#0C0911] border-1 transition-all  border-white rounded-lg
-              ${visible ? "w-40 h-screen p-6 mt-22" : "w-0 h-0 p-0 "}`}
+              ${visible ? "w-40 h-screen p-6 mt-[89px]" : "w-0 h-0 p-0 "}`}
         >
             <Image
           src={assets.cross}
