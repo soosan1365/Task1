@@ -8,6 +8,8 @@ import trust2 from "../../../public/assets/trust2.png";
 import trust3 from "../../../public/assets/trust3.png";
 import TryFree from "../../../public/assets/TryFree.png";
 import logowhite from "../../../public/assets/logowhite.png";
+import cross from "../../../public/assets/cross.png";
+import menu from "../../../public/assets/menu.png";
 
 const assets = {
   btnLeft,
@@ -20,6 +22,7 @@ const assets = {
   trust3,
   TryFree,
   logowhite,
+  cross,menu
 };
 
 const navs = [
