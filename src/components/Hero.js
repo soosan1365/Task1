@@ -4,8 +4,8 @@ import { assets } from "./constants/data";
 
 const Hero = () => {
   return (
-    <div className="flex  items-center justify-center mt-28  ">
-      <div className="flex flex-col justify-center items-center gap-10">
+    <div className="flex  items-center justify-center mt-13 md:mt-28  ">
+      <div className="flex flex-col justify-center items-center gap-5 md:gap-10">
         {/* heeder */}
         <div
           className="flex justify-center items-center  border-1 rounded-4xl p-2 gap-2
@@ -18,7 +18,7 @@ const Hero = () => {
         </div>
 
         {/* content */}
-        <div className="flex flex-col justify-center items-center text-center gap-4  px-20 ">
+        <div className="flex flex-col justify-center items-center text-center gap-2 md:gap-4 px-20 ">
           <p className="text-white  text-2xl  md:text-4xl lg:text-6xl whitespace-nowrap ">
             Validate Your App Ideas
           </p>
@@ -28,20 +28,22 @@ const Hero = () => {
           >
             Before You Build
           </p>
-          <p className="text-white/70  text-xl ">
-            Get comprehensive AI-powered analysis in
-            <span className="text-[#5C43E7]"> minutes </span>. Understand market
-            <br /> potential, competition, and revenue opportunities before
-            investing <br />
-            <span className="text-[#5C43E7]">time and money</span>.
+          <div className="flex flex-col text-sm md:text-base lg:text-xl justify-center items-center text-center">
+          <p className="text-white/70  text-center  ">
+            Get comprehensive AI-powered analysis in . Understand market{" "}
+            <span className="text-[#5C43E7]"> minutes </span>
           </p>
+          <span className=" text-white/70">
+            potential, competition, and revenue opportunities before investing{" "}
+          </span>
+          <span className="text-[#5C43E7]">time and money</span>.</div>
         </div>
         {/* private  */}
         <div
-          className="flex flex-col  justify-center items-center px-16  py-8   text-white gap-3
+          className="flex flex-col  justify-center items-center px-8  py-4 md:px-16  md:py-8   text-white gap-3
         bg-gradient-to-r from-[#0F1621] to-[#1A1B26] border-1 rounded-2xl  border-[#20222C] text-center  "
         >
-          <div className="flex justify-center items-center whitespace-nowrap gap-1 md:gap-5   ">
+          <div className="flex justify-center items-center text-center whitespace-nowrap gap-1 md:gap-5   ">
             <Image src={assets.priv} />
             <p className=" text-xl sm:text-2xl lg:text-3xl ">
               100% Private & Confidential
@@ -49,11 +51,11 @@ const Hero = () => {
           </div>
           <p className="  text-xs lg:text-base ">
             Your ideas are encrypted, never shared, and automatically deleted
-            after 30 days. We sign NDAs <br /> upon request.
+            after 30 days. We sign NDAs<br/> <span> upon request.</span>
           </p>
         </div>
         {/* btn */}
-        <div className=" grid grid-cols-1 md:grid-cols-2 justify-center items-center p-1.5 gap-4  ">
+        <div className=" grid grid-cols-1 md:grid-cols-2 justify-center items-center p-1.5 gap-2 md:gap-4  ">
           {/* btnLeft */}
           <button
             className=" flex text-white  py-3 px-5  rounded-xl gap-2.5

@@ -5,7 +5,7 @@ import { assets } from "./constants/data";
 const TrustSection = () => {
   return (
     // Trust
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4  justify-center  items-center whitespace-nowrap gap-6 mt-4">
+    <div className="grid grid-cols-2 lg:grid-cols-4  justify-center  items-center  mt-3 whitespace-nowrap gap-6 ">
       {/* number1 */}
       <div
         className=" flex flex-col justify-center  items-center px-16 py-3
