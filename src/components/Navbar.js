@@ -61,23 +61,23 @@ function Navbar() {
             <AlignJustify className="text-white" />
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <div className="flex items-center  gap-2 mt-2 justify-center  ">
+            <div className="flex  gap-2 mt-2 ml-5   ">
               <Link
                 href="/"
-                className="rounded-lg  whitespace-nowrap tracking-tight leading-5 text-sm lg:text-base p-2.5 gap-2.5 "
+                className="rounded-lg  whitespace-nowrap tracking-tight leading-5 text-sm  p-2.5 gap-2 "
               >
                 Sign In
               </Link>
               <div
-                className="flex items-center  justify-center whitespace-nowrap mr-5 md:mr-0 px-3 py-2 gap-1.5 rounded-lg tracking-tight 
+                className="flex items-center  justify-center whitespace-nowrap   px-3 py-2 gap-1.5 rounded-lg tracking-tight 
              bg-gradient-to-r from-[#3F1480] to-[#A43D83] "
               >
                 <Image
                   src={assets.TryFree}
                   alt="Try Free"
-                  className="w-4 h-4 md:w-6 md:h-6"
+                  className="w-4 h-4 "
                 />
-                <Link href="/" className="text-sm lg:text-base">
+                <Link href="/" className="text-sm ">
                   Try Free
                 </Link>
               </div>
