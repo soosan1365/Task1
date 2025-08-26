@@ -3,11 +3,7 @@ import Image from "next/image";
 import { assets } from "./constants/data.js";
 import Link from "next/link";
 import { navs } from "./constants/data.js";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 function Navbar() {
   return (
@@ -58,7 +54,7 @@ function Navbar() {
           </Link>
         </div>
       </div>
-
+      {/* MObile Nav */}
       <div className=" md:hidden ">
         <Sheet>
           <SheetTrigger>
