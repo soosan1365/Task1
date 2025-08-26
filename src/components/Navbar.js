@@ -6,9 +6,6 @@ import { navs } from "./constants/data.js";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
@@ -63,7 +60,7 @@ function Navbar() {
       </div>
 
       <div className=" md:hidden ">
-        <Sheet >
+        <Sheet>
           <SheetTrigger>
             <AlignJustify className="text-white" />
           </SheetTrigger>
@@ -89,11 +86,14 @@ function Navbar() {
                 </Link>
               </div>
             </div>
-            <div className=" text-black   ml-6  mt-8 ">   
+            <div className=" text-black   ml-6  mt-8 ">
               <ul className="flex flex-col text-sm gap-10 ">
                 {navs.map((item, index) => (
                   <li key={index}>
-                    <Link href={item.link} className="text-gray-950 inline-block py-1.5 px-3 rounded-2xl shadow-sm shadow-black/50 bg-gradient-to-b w-[250px] from-[#cbb1f1] to-[#f5c2e5]   ">
+                    <Link
+                      href={item.link}
+                      className="text-gray-950 inline-block py-1.5 px-3 rounded-2xl shadow-sm shadow-black/50 bg-gradient-to-b w-[250px] from-[#cbb1f1] to-[#f5c2e5]   "
+                    >
                       {item.titlt}
                     </Link>
                   </li>
