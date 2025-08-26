@@ -1,17 +1,22 @@
-"use client";
-
-import { React, useState } from "react";
+import { React } from "react";
 import Image from "next/image";
 import { assets } from "./constants/data.js";
 import Link from "next/link";
 import { navs } from "./constants/data.js";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { AlignJustify } from "lucide-react";
 function Navbar() {
-  const [visible, setVisible] = useState(false);
-
   return (
     <nav
       className=" flex  justify-between items-center  py-4 lg:py-6 rounded-2xl
-     border border-[#F2F2F7]  px-4 text-white bg-[#0C0911] "
+     border border-[#F2F2F7]  px-4  bg-[#0C0911] "
     >
       {/* nav left*/}
       <div className="flex justify-center items-center whitespace-nowrap gap-1 pl-3 md:pl-0">
@@ -35,17 +40,9 @@ function Navbar() {
       </div>
       {/* nav right */}
       <div className="flex items-center  gap-2 lg:gap-4  ">
-        <div className="md:hidden" onClick={() => setVisible(!visible)}>
-          <Image
-            src={visible ? assets.cross_icon : assets.menu_icon}
-            alt="menu"
-            className="w-6 h-6"
-          />
-        </div>
-
         <Link
           href="/"
-          className="rounded-lg  whitespace-nowrap tracking-tight leading-5 text-xs lg:text-base p-2.5 gap-2.5 
+          className="rounded-lg text-white  whitespace-nowrap tracking-tight leading-5 text-xs lg:text-base p-2.5 gap-2.5 
              hover:bg-white/10 transition"
         >
           Sign In
@@ -65,35 +62,46 @@ function Navbar() {
         </div>
       </div>
 
-      <div className="md:hidden" onClick={() => setVisible(!visible)}>
-        <Image
-          src={assets.menu}
-          alt="menu"
-          className={`min-w-7 flex-initial ${visible ? "hidden" : "block"}`}
-        />
-        <div
-          className={`absolute top-0 right-7  bottom-0 overflow-hidden whitespace-nowrap
-              bg-[#0C0911] border-1 transition-all  border-white rounded-lg
-              ${visible ? "w-40 h-screen p-6 mt-[93px]" : "w-0 h-0 p-0 "}`}
-        >
-            <Image
-          src={assets.cross}
-          alt="menu"
-          className={`min-w-7 flex-initial  ${!visible ? "hidden" : "block"}`}
-        />
-          <ul className="flex flex-col items-center justify-center gap-5  mt-5  ">
-            {navs.map((item, index) => (
-              <li key={index}>
-                <Link
-                  href={item.link}
-                  className="text-white/80 hover:text-white transition text-sm"
-                >
-                  {item.titlt}
+      <div className=" md:hidden ">
+        <Sheet >
+          <SheetTrigger>
+            <AlignJustify className="text-white" />
+          </SheetTrigger>
+          <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <div className="flex items-center  gap-2 mt-2 justify-center  ">
+              <Link
+                href="/"
+                className="rounded-lg  whitespace-nowrap tracking-tight leading-5 text-sm lg:text-base p-2.5 gap-2.5 "
+              >
+                Sign In
+              </Link>
+              <div
+                className="flex items-center  justify-center whitespace-nowrap mr-5 md:mr-0 px-3 py-2 gap-1.5 rounded-lg tracking-tight 
+             bg-gradient-to-r from-[#3F1480] to-[#A43D83] "
+              >
+                <Image
+                  src={assets.TryFree}
+                  alt="Try Free"
+                  className="w-4 h-4 md:w-6 md:h-6"
+                />
+                <Link href="/" className="text-sm lg:text-base">
+                  Try Free
                 </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+              </div>
+            </div>
+            <div className=" text-black   ml-6  mt-8 ">   
+              <ul className="flex flex-col text-sm gap-10 ">
+                {navs.map((item, index) => (
+                  <li key={index}>
+                    <Link href={item.link} className="text-gray-950 inline-block py-1.5 px-3 rounded-2xl shadow-sm shadow-black/50 bg-gradient-to-b w-[250px] from-[#cbb1f1] to-[#f5c2e5]   ">
+                      {item.titlt}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </nav>
   );

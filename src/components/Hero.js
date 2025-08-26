@@ -4,7 +4,7 @@ import { assets } from "./constants/data";
 
 const Hero = () => {
   return (
-    <div className="flex  items-center justify-center mt-13 md:mt-28  ">
+    <div className="flex container items-center justify-center mt-13 md:mt-28  ">
       <div className="flex flex-col justify-center items-center gap-5 md:gap-10">
         {/* heeder */}
         <div
